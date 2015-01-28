@@ -1,0 +1,32 @@
+//
+// Import nib
+//
+
+@import nib
+
+//
+// Import Mixins
+//
+
+@import "mixin/s"
+@import "mixin/replace"
+@import "mixin/hide-text"
+
+//
+// Global Reset
+//
+
+global-reset()
+
+//
+// Wrapper Style
+//
+
+.{meta.slug}
+  font-family: font.gothic
+  font-size: s(font.size.normal)
+  color: font.color
+  line-height: font.lineHeight.normal
+  &, *
+    box-sizing: border-box
+

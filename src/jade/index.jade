@@ -1,0 +1,28 @@
+extend base
+
+block append meta
+  // Meta Infomation
+  title= meta.title
+  meta(name="description", content=meta.description)
+  meta(name="keywords", content=meta.keywords)
+
+  // Facebook OGP
+  meta(name="og:title", content=meta.title)
+  meta(name="og:description", content=meta.description)
+  meta(name="og:type", content="website")
+  meta(name="og:url", content=meta.urlIndex)
+  meta(name="og:image", content=meta.ogImage)
+  meta(name="og:site_name", content=meta.title)
+
+block content
+  div(class=meta.slug)
+    .top
+      include partial/top
+    include module/social-roots
+
+block stylesheet
+  link(href="css/index.css", rel="stylesheet")
+
+block script-body
+  script(src="js/lib/jquery.js")
+  script(src="js/index.js")

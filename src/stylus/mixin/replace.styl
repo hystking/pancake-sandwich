@@ -1,0 +1,10 @@
+replace(path)
+  size = image-size(path)
+  width = s(size[0])
+  height = s(size[1])
+
+  width: width
+  height: height
+  background: image-url(path) no-repeat
+  background-size: width height
+  text-indent: -9999px

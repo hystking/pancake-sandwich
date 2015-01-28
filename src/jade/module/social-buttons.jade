@@ -1,0 +1,12 @@
+.social-buttons
+  .fb-share
+    | <div class="fb-share-button" data-href="#{meta.urlIndex}" data-layout="button_count"></div>
+  .tw-share
+    | <a href="https://twitter.com/share" class="twitter-share-button" data-url="#{meta.urlIndex}" data-text="#{meta.title} #{meta.description}">Tweet</a>
+  .line-share
+    | <span>
+    | <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+    | <script type="text/javascript">
+    | new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"#{meta.title} #{meta.description}","withUrl":true});
+    | </script>
+    | </span>
