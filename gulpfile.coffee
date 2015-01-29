@@ -1,26 +1,16 @@
-# modules
-gulp = require "gulp"
-args = (require "yargs").argv
-del = require "del"
-runSequence = require "run-sequence"
-mainBowerFiles = require "main-bower-files"
-
-$ = (require "gulp-load-plugins")()
-coffeeify = require "./lib/coffeeify"
-guruguru = require "./lib/guruguru"
-
-nib = require "nib"
-nsg = require "node-sprite-generator"
-stylusUse = require "./lib/stylus-use"
-
-##################################################
-
-SITE_PARAM_PATH = "./site-param"
 SRC_PATH = "src"
 DEBUG_PATH = "debug"
 RELEASE_PATH = "release"
 SP_SUFFIX = ""
 PC_SUFFIX = "-pc"
+SITE_PARAM_PATH = "./site-param"
+
+##################################################
+
+gulp = require "gulp"
+$ = (require "gulp-load-plugins")()
+runSequence = require "run-sequence"
+args = (require "yargs").argv
 
 ##################################################
 
@@ -36,8 +26,7 @@ opt = do ->
     src: _src
     dest: "#{_dest}#{_suffix}"
   }
-
-getSiteParam = -> (require SITE_PARAM_PATH) opt
+siteParam = (require SITE_PARAM_PATH) opt
 
 ##################################################
 
@@ -48,11 +37,13 @@ gulp.task "jade", ->
       errorHandler: (err) -> console.log err.message
     .pipe $.jade
       pretty: true
-      data: getSiteParam()
+      data: siteParam
     .pipe gulp.dest opt.dest
     .pipe $.connect.reload()
 
 gulp.task "stylus", ->
+  nib = require "nib"
+  stylusUse = require "./lib/stylus-use"
   gulp
     .src "#{opt.src}/stylus/index.styl"
     .pipe $.plumber
@@ -60,7 +51,7 @@ gulp.task "stylus", ->
     .pipe $.stylus
       use: [
         nib()
-        stylusUse getSiteParam()
+        stylusUse siteParam
       ]
       compress: not opt.isDebug
       sourcemap: inline: opt.isDebug if opt.isDebug
@@ -68,6 +59,7 @@ gulp.task "stylus", ->
     .pipe $.connect.reload()
   
 gulp.task "coffeeify", ->
+  coffeeify = require "./lib/coffeeify"
   gulp
     .src "#{opt.src}/coffee/index.coffee"
     .pipe $.if opt.isDebug, $.sourcemaps.init()
@@ -97,7 +89,7 @@ gulp.task "copy", ->
 
 gulp.task "sprite", ->
   dirname = args.dir
-  pixelRatio = getSiteParam().pixelRatio
+  pixelRatio = if opt.isPc then 1 else 2
   return if not dirname?
   nsg
     src: ["#{opt.src}/img/#{dirname}/*.png"]
@@ -121,6 +113,7 @@ gulp.task "test", ->
     .pipe $.mocha reporter: "nyan"
 
 gulp.task "guruguru", ->
+  guruguru = require "./lib/guruguru"
   rotatingSpeed = args.speed
   guruguru gulp, rotatingSpeed
 
@@ -143,7 +136,7 @@ gulp.task "watch", ["guruguru"], ->
 
   gulp.watch "*site-param.coffee", ->
     runSequence [
-      "delete-site-param-cache"
+      "reload-site-param"
     ], [
       "jade"
       "stylus"
@@ -151,15 +144,19 @@ gulp.task "watch", ["guruguru"], ->
     ]
 
 gulp.task "bower-scaffold", ->
+  mainBowerFiles = require "main-bower-files"
   gulp.src mainBowerFiles()
     .pipe $.if not opt.isDebug, $.uglify
       preserveComments: "some"
     .pipe gulp.dest "#{opt.dest}/js/lib"
 
-gulp.task "clean", (callback) -> del opt.dest, callback
-  
-gulp.task "delete-site-param-cache", ->
+gulp.task "clean", (callback) ->
+  del = require "del"
+  del opt.dest, callback
+
+gulp.task "reload-site-param", ->
   delete require.cache[require.resolve SITE_PARAM_PATH]
+  siteParam = (require SITE_PARAM_PATH) opt
 
 gulp.task "build", ->
   runSequence [
