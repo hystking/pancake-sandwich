@@ -92,9 +92,9 @@ index.jade
     // some content
 ```
 
-style.styl
+index.styl
 ```
 .slug
   .some-section
-    @import partial/some-section
+    @import module/some-section
 ```
