@@ -28,13 +28,6 @@ module.exports = (opt={}) ->
     font:
       gothic: "#{YU_GOTHIC}, #{HIRAGINO_GOTHIC}, #{MEIRYO}, sans-serif"
       mincho: "#{YU_MINCHO}, #{HIRAGINO_MINCHO}, #{MEIRYO}, serif"
-      color: "#000"
-      lineHeight:
-        normal: "1.85"
-      size:
-        big: 64
-        normal: 16
-        small: 12
   
     layout:
       width: if opt.isPc then 640 else 320
