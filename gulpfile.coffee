@@ -76,6 +76,7 @@ gulp.task "coffeeify", ->
     .pipe $.connect.reload()
 
 gulp.task "copy", ->
+  pngquant = require "imagemin-pngquant"
   gulp
     .src [
       "#{opt.src}/img/**/*.png"
@@ -84,6 +85,9 @@ gulp.task "copy", ->
       "#{opt.src}/js/**/*.js"
     ],
       base: opt.src
+    .pipe $.if not opt.isDebug, $.imagemin
+      progressive: true
+      use: [pngquant()]
     .pipe gulp.dest opt.dest
     .pipe $.connect.reload()
 
