@@ -163,13 +163,28 @@ gulp.task "reload-site-param", ->
   delete require.cache[require.resolve SITE_PARAM_PATH]
   siteParam = (require SITE_PARAM_PATH) opt
 
+gulp.task "scaffold", ->
+  # Do nothing
+  #
+  # if you want scafflod build files to some directory
+  # You can write here
+  ###
+  gulp
+    .src "#{opt.dest}/**/*",
+      base: opt.dest
+    .pipe gulp.dest "DESTINATION"
+    .pipe $.connect.reload()
+  ###
+
 gulp.task "build", ->
-  runSequence [
-    "clean"
-  ], [
+  build = [
     "jade"
     "stylus"
     "coffeeify"
     "copy"
     "bower-scaffold"
   ]
+  if opt.isDebug
+    runSequence ["clean"], build
+  else
+    runSequence ["clean"], build, ["scaffold-to-rails"]
