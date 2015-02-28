@@ -92,6 +92,7 @@ gulp.task "copy", ->
     .pipe $.connect.reload()
 
 gulp.task "sprite", ->
+  nsg = require "node-sprite-generator"
   dirname = args.dir
   pixelRatio = if opt.isPc then 1 else 2
   return if not dirname?
@@ -121,7 +122,7 @@ gulp.task "guruguru", ->
   rotatingSpeed = args.speed
   guruguru gulp, rotatingSpeed
 
-gulp.task "watch", ["guruguru"], ->
+gulp.task "watch", ["guruguru", "serve", "build"], ->
   
   gulp.watch [
     "#{opt.src}/jade/**/*.jade"

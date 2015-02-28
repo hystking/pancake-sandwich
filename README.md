@@ -18,17 +18,18 @@
 
 ## コマンド
 
+### npm run build
+
+ビルド  
+
 ### npm run serve
 
 0.0.0.0:9000 にサーバを立てる
 
 ### npm run watch
 
+build, serve のあと、
 jade, stylus, coffee の監視
-
-### npm run build
-
-ビルド  
 
 ### npm run bower
 
