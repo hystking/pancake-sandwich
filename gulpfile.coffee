@@ -164,17 +164,13 @@ gulp.task "reload-site-param", ->
   siteParam = (require SITE_PARAM_PATH) opt
 
 gulp.task "scaffold", ->
-  # Do nothing
-  #
-  # if you want scafflod build files to some directory
-  # You can write here
-  ###
+  """
   gulp
-    .src "#{opt.dest}/**/*",
+    .src "#{opt.dest}/*",
       base: opt.dest
     .pipe gulp.dest "DESTINATION"
     .pipe $.connect.reload()
-  ###
+  """
 
 gulp.task "build", ->
   build = [
@@ -187,4 +183,4 @@ gulp.task "build", ->
   if opt.isDebug
     runSequence ["clean"], build
   else
-    runSequence ["clean"], build, ["scaffold-to-rails"]
+    runSequence ["clean"], build, ["scaffold"]
