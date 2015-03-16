@@ -69,7 +69,6 @@ gulp.task "coffeeify", ->
     .pipe $.if not opt.isDebug, $.uglify
       preserveComments: "some"
     .pipe $.if opt.isDebug, $.sourcemaps.write()
-    .pipe $.sourcemaps.write()
     .pipe $.rename
       extname: ".js"
     .pipe gulp.dest "#{opt.dest}/js"
