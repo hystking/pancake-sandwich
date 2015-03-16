@@ -122,22 +122,9 @@ gulp.task "guruguru", ->
   guruguru gulp, rotatingSpeed
 
 gulp.task "watch", ["guruguru", "serve", "build"], ->
-  
-  gulp.watch [
-    "#{opt.src}/jade/**/*.jade"
-    "#{opt.src}/jade/**/*.html"
-  ], ["jade"]
-
-  gulp.watch [
-    "#{opt.src}/stylus/**/*.styl"
-    "#{opt.src}/stylus/**/*.css"
-  ], ["stylus"]
-
-  gulp.watch [
-    "#{opt.src}/coffee/**/*.coffee"
-    "#{opt.src}/coffee/**/*.js"
-  ], ["coffeeify"]
-
+  gulp.watch ["#{opt.src}/jade/**/*"], ["jade"]
+  gulp.watch ["#{opt.src}/stylus/**/*"], ["stylus"]
+  gulp.watch ["#{opt.src}/coffee/**/*"], ["coffeeify"]
   gulp.watch "*site-param.coffee", ->
     runSequence [
       "reload-site-param"
