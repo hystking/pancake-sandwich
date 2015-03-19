@@ -6,7 +6,7 @@
 
 ## Installation
 
-1. GraphicsMagick をインストール
+1. GraphicsMagick をインストール（ImageMagick の GPU 使う版）
   ```sh
   brew install graphicsmagick
   ```
