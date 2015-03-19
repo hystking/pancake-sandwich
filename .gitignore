@@ -141,3 +141,4 @@ bower_components
 
 # Debug build
 /debug*
+/release*
