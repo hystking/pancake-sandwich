@@ -78,24 +78,4 @@ npm run build -- --release
 
 ### module/\*\*/\*.jade, module/\*\*/\*.styl, module/\*\*/\*.coffee
 
-* モジュールとかセクションとか
-
-### CSS の独立性を維持するために
-
-moduleは極力、**"全体をラッパでくくらないスタイルを記述すべき"**
-
-#### 例
-
-index.jade
-```jade
-.slug
-  .some-section
-    // some content
-```
-
-index.styl
-```
-.slug
-  .some-section
-    @import module/some-section
-```
+* 使いまわせるモジュールとか、使いまわさなくても分けたいセクションとか
