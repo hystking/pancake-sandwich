@@ -28,21 +28,22 @@
 
 ### npm run watch
 
-build, serve のあと、
+build, serve のあと、 
 jade, stylus, coffee の監視
 
 ### npm run bower
 
-bower install のあと、
+bower install のあと、  
 main ファイルを src/js/lib 以下に吐き出す
 
-### npm run sprite -- --dir directory_name
+### npm run sprite
 
-スプライト画像と、スプライト用のstylusを作る  
-パスは、src/imgからの相対パス  
-
-src/stylus/sprite/directory_name.styl  
-にスプライト用の mixin が記述された stylus 用のファイルが書き出される  
+src/img/sprite 以下のディレクトリのスプライトを作る    
+画像は、src/img/ に  
+mixinファイルは、src/stylus/sprite/ に  
+それぞれ出力される
+    
+個別のタスクは、 sprite-#{directory_name} で登録される。
 
 ### npm test
 

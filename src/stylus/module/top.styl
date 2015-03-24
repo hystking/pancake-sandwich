@@ -1,3 +1,5 @@
+@import "../sprite/sample"
+
 &
   width: layout.width
   margin: s(24px) auto
@@ -16,4 +18,11 @@
 .text
   margin: s(16px) 0
   text-indent: .5em
-  //
+
+.icon-text
+  display: inline-block
+  sprite($text)
+  
+.icon-arrow
+  display: inline-block
+  sprite($arrow)
