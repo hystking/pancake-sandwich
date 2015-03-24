@@ -28,7 +28,7 @@
 
 ### npm run watch
 
-build, serve のあと、 
+build, serve のあと、  
 jade, stylus, coffee の監視
 
 ### npm run bower
