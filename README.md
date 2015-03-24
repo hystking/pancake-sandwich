@@ -39,8 +39,8 @@ main ファイルを src/js/lib 以下に吐き出す
 ### npm run sprite
 
 src/img/sprite 以下のディレクトリのスプライトを作る    
-画像は、src/img/ に  
-mixinファイルは、src/stylus/sprite/ に  
+画像は、src/img に  
+mixinファイルは、src/stylus/sprite に  
 それぞれ出力される
     
 個別のタスクは、 sprite-#{directory_name} で登録される。
