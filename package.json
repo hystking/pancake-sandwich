@@ -40,6 +40,7 @@
     "mobile-detect": "^0.4.3",
     "modernizr": "^3.0.0-alpha.3",
     "nib": "^1.1.0",
+    "phantomjs": "^1.9.16",
     "require-dir": "^0.2.0",
     "run-sequence": "^1.0.2",
     "stylus": "^0.50.0",
