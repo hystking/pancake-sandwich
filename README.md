@@ -30,7 +30,7 @@ jade, stylus, coffee の監視
 
 src/img/sprite 以下のディレクトリのスプライトを作る    
 画像は、src/img に  
-mixinファイルは、src/stylus/sprite に  
+jsonファイルは、src/stylus/sprite に  
 それぞれ出力される
     
 個別のタスクは、 sprite-#{directory_name} で登録される。
