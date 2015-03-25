@@ -1,2 +1,2 @@
-param = require ("site-param")()
+param = (require "site-param")()
 console.log param
