@@ -14,7 +14,6 @@ createSpriteTask = (dirPath) ->
   taskName = "sprite-#{name}"
   gulp.task taskName, ->
     spriteData = gulp.src "#{dirPath}/*.png"
-      .pipe $.plumber()
       .pipe $.spritesmith
         imgName: "#{name}.png"
         cssName: "#{name}.json"

@@ -32,7 +32,9 @@ gulp.task "stylus", ->
   gulp
     .src "#{config.src}/stylus/index.styl"
     .pipe $.plumber
-      errorHandler: (err) -> console.log err.message
+      errorHandler: (err) ->
+        console.log err.message
+        @emit "end"
     .pipe $.stylus
       use: [
         nib()
