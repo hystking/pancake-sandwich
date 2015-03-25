@@ -2,19 +2,12 @@
 
 ## 必要なもの
 * Node.js, npm
-* GraphicsMagick (スプライトの生成に使う)
 
 ## Installation
 
-1. GraphicsMagick をインストール（ImageMagick の GPU 使う版）
-  ```sh
-  brew install graphicsmagick
-  ```
-
-2. npm install する
-  ```
-  npm install
-  ```
+```
+npm install
+```
 
 ## コマンド
 
