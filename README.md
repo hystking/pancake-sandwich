@@ -9,6 +9,8 @@
 npm install
 ```
 
+※ bower install もはしる
+
 ## コマンド
 
 ### npm run build
@@ -23,11 +25,6 @@ npm install
 
 build, serve のあと、  
 jade, stylus, coffee の監視
-
-### npm run bower
-
-bower install のあと、  
-main ファイルを src/js/lib 以下に吐き出す
 
 ### npm run sprite
 
