@@ -83,5 +83,5 @@ npm run build -- --release
 
 ### Stylus の @include と @require について
 
-* 極力 @require を利用する（複数回読んでも、css には一回しか出力されない）
+* 極力 @require を利用する（@include と違い、複数回呼んでも、css には一回しか出力されない）
 * スタイルが順番に依存するようなときは、そもそもの設計を見直すべき
