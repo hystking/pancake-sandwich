@@ -1,10 +1,13 @@
+@require "s"
+@require "bg"
+@require "hide-text"
+
 replace(path)
   size = image-size(path)
   width = s(size[0])
   height = s(size[1])
 
+  bg(path)
+  hide-text(path)
   width: width
   height: height
-  background: url(path) no-repeat
-  background-size: width height
-  text-indent: -9999px

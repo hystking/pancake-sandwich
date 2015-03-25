@@ -1,0 +1,9 @@
+@require "s"
+
+bg(path)
+  size = image-size(path)
+  width = s(size[0])
+  height = s(size[1])
+  
+  background: url(path) no-repeat
+  background-size: width height

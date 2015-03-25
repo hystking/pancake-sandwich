@@ -1,0 +1,20 @@
+@require "s"
+
+spriteWidth(_sprite)
+  width: s(_sprite.width)
+  
+spriteHeight(_sprite)
+  height: s(_sprite.height)
+  
+spritePosition(_sprite)
+  background-position: s(_sprite.offset_x) s(_sprite.offset_y)
+
+spriteImage(_sprite)
+  background-image: "url(%s)" % _sprite.escaped_image
+  background-size: s(_sprite.total_width) s(_sprite.total_height)
+
+sprite(_sprite)
+  spriteWidth(_sprite)
+  spriteHeight(_sprite)
+  spritePosition(_sprite)
+  spriteImage(_sprite)

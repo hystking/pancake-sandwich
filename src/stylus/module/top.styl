@@ -1,4 +1,4 @@
-@import "../sprite/sample"
+sample = json("../sprite/sample.json", {hash: true})
 
 &
   width: layout.width
@@ -21,8 +21,8 @@
 
 .icon-text
   display: inline-block
-  sprite($text)
+  sprite(sample.text)
   
 .icon-arrow
   display: inline-block
-  sprite($arrow)
+  sprite(sample.arrow)
