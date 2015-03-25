@@ -38,7 +38,7 @@ jsonファイルは、src/stylus/sprite に
 ### npm test
 
 test/ 以下のテストを走らせる。  
-phantom とかは入れてないので、ユニットテストだけ
+tape + testling なので、headless ブラウザ（phantom など）が必要
 
 #### コマンドオプション
 

@@ -4,7 +4,7 @@
   "description": "perapera",
   "main": "index.js",
   "scripts": {
-    "test": "browserify test/test.coffee -t coffeeify | testling",
+    "test": "browserify test/*.coffee -t coffeeify | testling",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build",
