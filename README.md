@@ -1,4 +1,4 @@
-# ペラN のテンプレートです
+# ペラN のテンプレート
 
 ## 必要なもの
 * Node.js, npm
@@ -33,16 +33,16 @@ src/img/sprite 以下のディレクトリのスプライトを作る
 jsonファイルは、src/stylus/sprite に  
 それぞれ出力される
     
-個別のタスクは、 sprite-#{directory_name} で登録される。
+個別のタスクは、 sprite-#{directory_name} で登録される
 
 ### npm test
 
-test/ 以下のテストを走らせる。  
+test/ 以下のテストを走らせる  
 tape + testling (phantomjs)
 
 #### コマンドオプション
 
-全部共通です。
+全部共通
 
 * --src source directory
 * --dest destination directory
@@ -65,7 +65,7 @@ npm run build -- --release
 ### index.jade, style.styl, app.coffee
 
 * エントリポイント  
-* モジュールとパーツの読み込み。
+* モジュールとパーツの読み込み
 
 ### module/\*\*/\*.jade, module/\*\*/\*.styl, module/\*\*/\*.coffee
 
