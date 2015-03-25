@@ -10,6 +10,7 @@ gulp.task "build", ->
     "coffeeify"
     "copy"
     "bower-scaffold"
+    "modernizr"
   ]
   if config.isDebug
     runSequence ["clean"], build

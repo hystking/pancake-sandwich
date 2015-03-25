@@ -21,14 +21,17 @@ block append meta
   meta(name="twitter:image:src", content=meta.ogImage)
 
 block content
-  div(class=meta.slug)
-    .top
+  main(class=meta.slug)
+    section.top
       include module/top
-    include module/social-roots
+  include module/social-roots
 
 block append stylesheet
   link(href="css/index.css", rel="stylesheet")
 
-block append script-body
+block append script-head
+  script(src="js/lib/modernizr.js")
   script(src="js/lib/jquery.js")
+    
+block append script-body
   script(src="js/index.js")
