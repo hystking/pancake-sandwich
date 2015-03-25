@@ -4,7 +4,7 @@
   "description": "perapera",
   "main": "index.js",
   "scripts": {
-    "test": "browserify test/*.coffee -t coffeeify | testling",
+    "test": "testling",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build",
@@ -52,5 +52,19 @@
   },
   "browser": {
     "site-param": "./site-param.coffee"
+  },
+  "browserify": {
+    "transform": ["coffeeify"]
+  },
+  "testling": {
+    "files": "test/*.coffee",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/latest",
+      "firefox/latest",
+      "safari/latest",
+      "iphone/latest",
+      "android-browser/latest"
+    ]
   }
 }
