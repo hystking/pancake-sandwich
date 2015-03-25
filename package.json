@@ -4,10 +4,10 @@
   "description": "perapera",
   "main": "index.js",
   "scripts": {
+    "test": "browserify test/test.coffee -t coffeeify | testling",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build",
-    "test": "gulp test",
     "sprite": "gulp sprite",
     "postinstall": "bower install"
   },
@@ -15,7 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^7.0.0",
-    "chai": "^1.10.0",
     "coffee-script": "^1.8.0",
     "coffeeify": "^1.0.0",
     "colors": "^1.0.3",
@@ -27,7 +26,6 @@
     "gulp-imagemin": "^2.2.0",
     "gulp-jade": "^0.11.0",
     "gulp-load-plugins": "^0.8.0",
-    "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
     "gulp-sourcemaps": "^1.3.0",
@@ -45,6 +43,8 @@
     "require-dir": "^0.2.0",
     "run-sequence": "^1.0.2",
     "stylus": "^0.50.0",
+    "tape": "^3.5.0",
+    "testling": "^1.7.1",
     "vinyl-source-stream": "^1.1.0",
     "vinyl-transform": "^1.0.0",
     "yargs": "^1.3.3"

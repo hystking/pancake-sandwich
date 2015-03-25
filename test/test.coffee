@@ -1,7 +1,6 @@
-chai = require "chai"
-expect = chai.expect
+test = require "tape"
 
-describe "Array", ->
-  describe "@indexOf", ->
-    it "should return -1 when the value is not present", ->
-      (expect [1, 2, 3].indexOf 5).to.equal -1
+test "Array indexOf", (t) ->
+  t.equal ([1, 2, 3].indexOf 1), 0
+  t.equal ([1, 2, 3].indexOf 5), -1
+  t.end()
