@@ -7,8 +7,6 @@ glob = require "glob"
 _ = require "lodash"
 isDirectory = require "is-directory"
 
-paths = glob.sync "#{config.src}/img/sprite/*"
-
 createSpriteTask = (dirPath) ->
   name = path.basename dirPath
   taskName = "sprite-#{name}"
@@ -23,7 +21,7 @@ createSpriteTask = (dirPath) ->
     spriteData.css.pipe gulp.dest "#{config.src}/stylus/sprite"
   return taskName
 
-taskNames = _ paths
+taskNames = _ glob.sync "#{config.src}/img/sprite/*"
   .filter (p) -> isDirectory.sync p
   .map createSpriteTask
   .value()
