@@ -1,0 +1,46 @@
+{
+    "arrow": {
+        "x": 93,
+        "y": 0,
+        "width": 44,
+        "height": 19,
+        "image": "../img/sample.png",
+        "total_width": 137,
+        "total_height": 93,
+        "escaped_image": "../img/sample.png",
+        "offset_x": -93,
+        "offset_y": 0,
+        "px": {
+            "x": "93px",
+            "y": "0px",
+            "offset_x": "-93px",
+            "offset_y": "0px",
+            "height": "19px",
+            "width": "44px",
+            "total_height": "93px",
+            "total_width": "137px"
+        }
+    },
+    "text": {
+        "x": 0,
+        "y": 0,
+        "width": 93,
+        "height": 93,
+        "image": "../img/sample.png",
+        "total_width": 137,
+        "total_height": 93,
+        "escaped_image": "../img/sample.png",
+        "offset_x": 0,
+        "offset_y": 0,
+        "px": {
+            "x": "0px",
+            "y": "0px",
+            "offset_x": "0px",
+            "offset_y": "0px",
+            "height": "93px",
+            "width": "93px",
+            "total_height": "93px",
+            "total_width": "137px"
+        }
+    }
+}

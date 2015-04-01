@@ -16,7 +16,7 @@ _dest = args.dest or (if _isDebug then DEBUG_PATH else RELEASE_PATH)
 module.exports =
   isPc: _isPc
   isDebug: _isDebug
-  src: _src
+  src: "#{_src}#{_suffix}"
   dest: "#{_dest}#{_suffix}"
   siteParam: (require "../site-param")
     isPc: _isPc
