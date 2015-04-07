@@ -4,7 +4,6 @@ config = require "../config"
 
 browserify = require "browserify"
 through2 = require "through2"
-colors = require "colors"
 
 coffeeify = (opt) ->
   through2.obj (file, enc, next) ->
