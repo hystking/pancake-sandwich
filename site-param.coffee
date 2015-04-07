@@ -8,26 +8,19 @@ DOMAIN = "example.org"
 PATH = "/"
 URL_INDEX = "http://#{DOMAIN}#{PATH}"
 
-module.exports = (opt={}) ->
-  unless opt.isPc?
-    MobileDetect = require "mobile-detect"
-    md = new MobileDetect navigator?.userAgent
-    opt.isPc = not md.mobile()
-  do ->
-    pixelRatio: if opt.isPc then 1 else 2
-    isPc: opt.isPc or false
+module.exports =
+  pixelRatio: 1
+  meta:
+    slug: "peran"
+    title: "ページタイトル"
+    keywords: "キーワード"
+    description: "ディスクリプション"
+    urlIndex: URL_INDEX
+    ogImage: "#{URL_INDEX}img/ogp.jpg"
 
-    meta:
-      slug: "peran"
-      title: "ページタイトル"
-      keywords: "キーワード"
-      description: "ディスクリプション"
-      urlIndex: URL_INDEX
-      ogImage: "#{URL_INDEX}img/ogp.jpg"
+  font:
+    gothic: "#{YU_GOTHIC}, #{HIRAGINO_GOTHIC}, #{MEIRYO}, sans-serif"
+    mincho: "#{YU_MINCHO}, #{HIRAGINO_MINCHO}, #{MEIRYO}, serif"
 
-    font:
-      gothic: "#{YU_GOTHIC}, #{HIRAGINO_GOTHIC}, #{MEIRYO}, sans-serif"
-      mincho: "#{YU_MINCHO}, #{HIRAGINO_MINCHO}, #{MEIRYO}, serif"
-  
-    layout:
-      width: if opt.isPc then 640 else 320
+  layout:
+    width: 640

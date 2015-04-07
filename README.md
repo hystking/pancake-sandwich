@@ -47,7 +47,6 @@ tape + testling (phantomjs)
 * --src source directory
 * --dest destination directory
 * --release release build
-* --pc switch enviroment to pc mode
 
 **オプションは、すべて"--"を挟む**
 
