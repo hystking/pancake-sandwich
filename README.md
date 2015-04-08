@@ -35,11 +35,6 @@ jsonファイルは、src/stylus/sprite に
     
 個別のタスクは、 sprite-#{directory_name} で登録される
 
-### npm test
-
-test/ 以下のテストを走らせる  
-tape + testling (phantomjs)
-
 #### コマンドオプション
 
 全部共通
