@@ -40,13 +40,11 @@
     "mkdirp": "^0.5.0",
     "modernizr": "Modernizr/Modernizr",
     "nib": "^1.1.0",
-    "phantomjs": "^1.9.16",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.0.2",
     "serve-index": "^1.6.3",
     "serve-static": "^1.9.2",
     "stylus": "^0.50.0",
-    "tape": "^3.5.0",
     "through2": "^0.6.3",
     "yargs": "^3.6.0"
   }
