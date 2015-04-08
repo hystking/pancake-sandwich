@@ -1,2 +1,1 @@
-param = (require "site-param")()
-console.log param
+# my sweet code is here
