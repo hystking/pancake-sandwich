@@ -4,7 +4,6 @@ config = require "../config"
 
 connect = require "connect"
 serveStatic = require "serve-static"
-serveIndex = require "serve-index"
 livereload = require "connect-livereload"
 
 gulp.task "serve", ->
@@ -12,5 +11,4 @@ gulp.task "serve", ->
   connect()
     .use livereload()
     .use serveStatic config.dest
-    .use serveIndex config.dest
     .listen 9000
