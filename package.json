@@ -37,7 +37,6 @@
     "lodash": "^3.5.0",
     "main-bower-files": "^2.6.2",
     "mkdirp": "^0.5.0",
-    "mobile-detect": "^1.0.0",
     "modernizr": "Modernizr/Modernizr",
     "nib": "^1.1.0",
     "phantomjs": "^1.9.16",
