@@ -4,7 +4,6 @@
   "description": "perapera",
   "main": "index.js",
   "scripts": {
-    "test": "testling",
     "watch": "gulp watch",
     "serve": "gulp serve",
     "build": "gulp build",
@@ -44,27 +43,7 @@
     "run-sequence": "^1.0.2",
     "stylus": "^0.50.0",
     "tape": "^3.5.0",
-    "testling": "^1.7.1",
     "through2": "^0.6.3",
     "yargs": "^3.6.0"
-  },
-  "browser": {
-    "site-param": "./site-param.coffee"
-  },
-  "browserify": {
-    "transform": [
-      "coffeeify"
-    ]
-  },
-  "testling": {
-    "files": "test/*.coffee",
-    "browsers": [
-      "ie/8..latest",
-      "chrome/latest",
-      "firefox/latest",
-      "safari/latest",
-      "iphone/latest",
-      "android-browser/latest"
-    ]
   }
 }
