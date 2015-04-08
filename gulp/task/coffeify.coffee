@@ -23,6 +23,7 @@ gulp.task "coffeeify", ->
         @emit "end"
     .pipe coffeeify
       extensions: [".coffee", ".json"]
+      transform: ["coffeeify"]
       debug: config.isDebug
     .pipe $.if not config.isDebug, $.uglify
       preserveComments: "some"
