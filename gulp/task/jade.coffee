@@ -13,4 +13,4 @@ gulp.task "jade", ->
       pretty: true
       data: config.siteParam
     .pipe gulp.dest config.dest
-    .pipe $.connect.reload()
+    .pipe $.livereload()

@@ -31,4 +31,4 @@ gulp.task "coffeeify", ->
     .pipe $.rename
       extname: ".js"
     .pipe gulp.dest "#{config.dest}/js"
-    .pipe $.connect.reload()
+    .pipe $.livereload()

@@ -16,4 +16,3 @@ gulp.task "copy", ->
       progressive: true
       use: [pngquant()]
     .pipe gulp.dest config.dest
-    .pipe $.connect.reload()

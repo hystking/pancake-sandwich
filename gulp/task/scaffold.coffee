@@ -10,5 +10,4 @@ gulp.task "scaffold", ->
     .src "#{config.dest}/*",
       base: config.dest
     .pipe gulp.dest "DESTINATION"
-    .pipe $.connect.reload()
   """

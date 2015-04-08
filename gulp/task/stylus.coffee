@@ -43,4 +43,4 @@ gulp.task "stylus", ->
       compress: not config.isDebug
       sourcemap: inline: config.isDebug if config.isDebug
     .pipe gulp.dest "#{config.dest}/css"
-    .pipe $.connect.reload()
+    .pipe $.livereload()
