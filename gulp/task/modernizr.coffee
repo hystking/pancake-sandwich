@@ -12,6 +12,7 @@ mkdirp = require "mkdirp"
 
 gulp.task "modernizr", (callback) ->
   modernizr.build
+    minify: true
     options: [
       "html5shiv"
       "setClasses"
