@@ -1,19 +1,8 @@
-spriteWidth(_sprite)
+sprite(_sprite)
   width: unit(_sprite.width, px)
-  
-spriteHeight(_sprite)
   height: unit(_sprite.height, px)
   
-spritePosition(_sprite)
-  background-position: unit(_sprite.offset_x, px) unit(_sprite.offset_y, px)
-
-spriteImage(_sprite)
   background-image: "url(%s)" % _sprite.escaped_image
   background-repeat: no-repeat
   background-size: unit(_sprite.total_width, px) unit(_sprite.total_height, px)
-
-sprite(_sprite)
-  spriteWidth(_sprite)
-  spriteHeight(_sprite)
-  spritePosition(_sprite)
-  spriteImage(_sprite)
+  background-position: unit(_sprite.offset_x, px) unit(_sprite.offset_y, px)
