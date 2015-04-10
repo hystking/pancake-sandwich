@@ -2,6 +2,7 @@ gulp = require "gulp"
 $ = do require "gulp-load-plugins"
 config = require "../config"
 
+path = require "path"
 _ = require "lodash"
 stylus = require "stylus"
 nodes = stylus.nodes
@@ -27,6 +28,18 @@ defineObject = (param) -> (styl) ->
   for key, val of param
     styl.define key, (parse val), true
 
+resolveImagePath = (imagePath) ->
+  stylusPath = "#{config.src}/stylus/"
+  imagePath = "#{config.src}/img/#{imagePath.val}"
+  relativePath = path.relative stylusPath, imagePath
+  ltr = new nodes.Literal "url(#{relativePath})"
+  ltr.filename = ""
+  ltr
+
+dataUrlImage = stylus.url
+  paths: ["#{config.dest}/img"]
+  limit: false
+
 gulp.task "stylus", ->
   nib = require "nib"
   gulp
@@ -38,6 +51,9 @@ gulp.task "stylus", ->
     .pipe $.stylus
       use: [
         nib()
+        (styl) ->
+          styl.define "url", resolveImagePath
+          styl.define "data-url", dataUrlImage
         defineObject config.siteConfig
       ]
       compress: not config.isDebug

@@ -2,7 +2,7 @@ sprite(_sprite)
   width: unit(_sprite.width, px)
   height: unit(_sprite.height, px)
   
-  background-image: "url(%s)" % _sprite.escaped_image
+  background-image: url(s(_sprite.escaped_image))
   background-repeat: no-repeat
   background-size: unit(_sprite.total_width, px) unit(_sprite.total_height, px)
   background-position: unit(_sprite.offset_x, px) unit(_sprite.offset_y, px)

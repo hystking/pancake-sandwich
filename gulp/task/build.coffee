@@ -4,15 +4,17 @@ config = require "../config"
 runSequence = require "run-sequence"
 
 gulp.task "build", ->
-  build = [
-    "jade"
-    "stylus"
-    "coffeeify"
+  copy = [
     "copy"
     "bower-scaffold"
     "modernizr"
   ]
+  build = [
+    "jade"
+    "stylus"
+    "coffeeify"
+  ]
   if config.isDebug
-    runSequence ["clean"], build
+    runSequence ["clean"], copy, build
   else
-    runSequence ["clean"], build, ["scaffold"]
+    runSequence ["clean"], copy, build, ["scaffold"]

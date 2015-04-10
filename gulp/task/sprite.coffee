@@ -15,7 +15,7 @@ createSpriteTask = (dirPath) ->
       .pipe $.spritesmith
         imgName: "#{name}.png"
         cssName: "#{name}.json"
-        imgPath: "../img/#{name}.png"
+        imgPath: "#{name}.png"
         cssVarMap: (sprite) -> sprite.source_image = undefined
     spriteData.img.pipe gulp.dest "#{config.src}/img"
     spriteData.css.pipe gulp.dest "#{config.src}/stylus/sprite"
