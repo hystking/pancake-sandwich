@@ -64,8 +64,3 @@ npm run build -- --release
 ### module/\*\*/\*.jade, module/\*\*/\*.styl, module/\*\*/\*.coffee
 
 * 使いまわせるモジュールとか、使いまわさなくても分けたいセクションとか
-
-### Stylus の @include と @require について
-
-* 極力 @require を利用する（@include と違い、複数回呼んでも、css には一回しか出力されない）
-* スタイルが順番に依存するようなときは、そもそもの設計を見直すべき
