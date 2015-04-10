@@ -1,17 +1,16 @@
-@require "s"
-
 spriteWidth(_sprite)
-  width: s(_sprite.width)
+  width: unit(_sprite.width, px)
   
 spriteHeight(_sprite)
-  height: s(_sprite.height)
+  height: unit(_sprite.height, px)
   
 spritePosition(_sprite)
-  background-position: s(_sprite.offset_x) s(_sprite.offset_y)
+  background-position: unit(_sprite.offset_x, px) unit(_sprite.offset_y, px)
 
 spriteImage(_sprite)
   background-image: "url(%s)" % _sprite.escaped_image
-  background-size: s(_sprite.total_width) s(_sprite.total_height)
+  background-repeat: no-repeat
+  background-size: unit(_sprite.total_width, px) unit(_sprite.total_height, px)
 
 sprite(_sprite)
   spriteWidth(_sprite)

@@ -1,13 +1,11 @@
-@require "s"
-@require "bg"
 @require "hide-text"
 
 replace(path)
   size = image-size(path)
-  width = s(size[0])
-  height = s(size[1])
 
-  bg(path)
+  background-image: url(path)
+  background-repeat: no-repeat
+  width: size[0]
+  height: size[1]
+  
   hide-text()
-  width: width
-  height: height
