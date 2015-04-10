@@ -13,6 +13,7 @@
   "author": "gon",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.4.1",
     "browserify": "^9.0.3",
     "coffee-script": "^1.9.1",
     "coffeeify": "^1.0.0",
