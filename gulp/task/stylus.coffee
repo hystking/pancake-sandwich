@@ -38,7 +38,7 @@ gulp.task "stylus", ->
     .pipe $.stylus
       use: [
         nib()
-        defineObject config.siteParam
+        defineObject config.siteConfig
       ]
       compress: not config.isDebug
       sourcemap: inline: config.isDebug if config.isDebug

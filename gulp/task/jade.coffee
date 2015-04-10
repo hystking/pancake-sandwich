@@ -11,6 +11,6 @@ gulp.task "jade", ->
         @emit "end"
     .pipe $.jade
       pretty: true
-      data: config.siteParam
+      data: config.siteConfig
     .pipe gulp.dest config.dest
     .pipe $.livereload()
