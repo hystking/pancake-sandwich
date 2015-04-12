@@ -1,32 +1,32 @@
 suddenDeath = require "./sudden-death"
 
+clearLog = ->
+  process.stdout.cursorTo 0, 0
+  lines = process.stdout.getWindowSize()[1]
+  for i in [0...lines]
+    console.log "\n"
+
 module.exports = (gulp, rotatingSpeed) ->
   lastTask = ""
   taskStarted = false
-  times = 0
+  reversed = false
+  rotatingSpeed or= 1
+  duration = 1000 / rotatingSpeed
 
   gulp.on "task_start", (e) ->
     taskStarted = true
-    stdout = process.stdout
-    stdout.cursorTo 0, 0
-    lines = process.stdout.getWindowSize()[1]
-    for i in [0...lines]
-      console.log "\n"
-    stdout.cursorTo 0, 6
+    clearLog()
+    process.stdout.cursorTo 0, 5
 
   gulp.on "task_stop", (e) ->
-    lastTask = e.task
-    times++
     taskStarted = false
+    reversed = not reversed
+    lastTask = e.task
   
-  steps = 6
-  duration = 1600 / (rotatingSpeed or 1)
-  interval = duration / steps | 0
-
   setInterval =>
     return if taskStarted
     t = Date.now() / duration % 1
-    t = 1 - t if times % 2 is 0
+    t = 1 - t if reversed
     process.stdout.cursorTo 0, 0
-    suddenDeath lastTask, t
-  , interval
+    console.log suddenDeath lastTask, t
+  , duration / 6 | 0

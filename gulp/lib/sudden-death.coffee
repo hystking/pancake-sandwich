@@ -34,8 +34,9 @@ module.exports = (msg, t=0) ->
   head = "(#{faceClipped})"
   msgOut = colors.yellow paddedMsg.toUpperCase()
 
-  console.log ""
-  console.log POPUP_TOP
-  console.log "#{POPUP_LEFT}#{msgOut}#{POPUP_RIGHT}"
-  console.log POPUP_BOTTOM
-  console.log "#{waveLeft}#{head}#{waveRight}"
+  module.exports = """
+                   #{POPUP_TOP}
+                   #{POPUP_LEFT}#{msgOut}#{POPUP_RIGHT}
+                   #{POPUP_BOTTOM}
+                   #{waveLeft}#{head}#{waveRight}
+                   """
