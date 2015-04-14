@@ -39,9 +39,9 @@ jsonファイルは、src/stylus/sprite に
 
 全部共通
 
-* --src source directory
-* --dest destination directory
-* --release release build
+* --src ソースのディレクトリを指定（デフォルトは src）
+* --dest 出力のディレクトリを指定（デフォルトは debug、リリースビルドの場合は release）
+* --release つけるとリリースビルドになる（gulp の task の config.isDebug が false になる）
 
 **オプションは、すべて"--"を挟む**
 
