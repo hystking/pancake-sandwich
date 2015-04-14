@@ -37,7 +37,6 @@ resolveImagePath = (imagePath) ->
   ltr
 
 dataUrlImage = stylus.url
-  paths: ["#{config.dest}/img"]
   limit: false
 
 gulp.task "stylus", ->
@@ -58,5 +57,6 @@ gulp.task "stylus", ->
       ]
       compress: not config.isDebug
       sourcemap: inline: config.isDebug if config.isDebug
+      paths: ["#{config.dest}/img"]
     .pipe gulp.dest "#{config.dest}/css"
     .pipe $.livereload()
