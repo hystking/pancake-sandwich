@@ -1,11 +1,18 @@
 @require "hide-text"
 
-replace(path)
+_replace(path)
   size = image-size(path)
 
-  background-image: url(path)
   background-repeat: no-repeat
   width: size[0]
   height: size[1]
   
   hide-text()
+  
+replace(path)
+  background-image: url(path)
+  _replace(path)
+  
+replace-data-url(path)
+  background-image: data-url(path)
+  _replace(path)
