@@ -36,9 +36,6 @@ resolveImagePath = (imagePath) ->
   ltr.filename = ""
   ltr
 
-dataUrlImage = stylus.url
-  limit: false
-
 gulp.task "stylus", ->
   nib = require "nib"
   gulp
@@ -48,15 +45,15 @@ gulp.task "stylus", ->
         console.log err.message
         @emit "end"
     .pipe $.stylus
+      compress: not config.isDebug
+      sourcemap: inline: config.isDebug
+      paths: ["#{config.dest}/img"]
       use: [
         nib()
+        defineObject config.siteConfig
         (styl) ->
           styl.define "url", resolveImagePath
-          styl.define "data-url", dataUrlImage
-        defineObject config.siteConfig
+          styl.define "data-url", stylus.url limit: false
       ]
-      compress: not config.isDebug
-      sourcemap: inline: config.isDebug if config.isDebug
-      paths: ["#{config.dest}/img"]
     .pipe gulp.dest "#{config.dest}/css"
     .pipe $.livereload()
