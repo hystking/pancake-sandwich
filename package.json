@@ -1,8 +1,4 @@
 {
-  "name": "peran",
-  "version": "0.0.0",
-  "description": "perapera",
-  "main": "index.js",
   "scripts": {
     "watch": "gulp watch",
     "serve": "gulp serve",
@@ -10,8 +6,6 @@
     "sprite": "gulp sprite",
     "postinstall": "bower install"
   },
-  "author": "gon",
-  "license": "MIT",
   "devDependencies": {
     "bower": "^1.4.1",
     "browserify": "^9.0.3",
