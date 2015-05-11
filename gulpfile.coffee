@@ -1,6 +1,7 @@
 (require "require-dir") "./gulp/task"
 
 gulp = require "gulp"
+taskListing = require "gulp-task-listing"
 suddenDeath = require "./gulp/lib/sudden-death"
 
 gulp.task "default", ->
@@ -10,4 +11,4 @@ gulp.task "default", ->
   console.log suddenDeath "read", .9
   console.log ""
   console.log suddenDeath "readme", 1
-  console.log ""
+  taskListing()

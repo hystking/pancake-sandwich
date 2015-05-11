@@ -26,6 +26,7 @@
     "gulp-rename": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-stylus": "latest",
+    "gulp-task-listing": "latest",
     "gulp-uglify": "latest",
     "gulp.spritesmith": "latest",
     "imagemin-pngquant": "latest",
