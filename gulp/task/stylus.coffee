@@ -46,7 +46,7 @@ gulp.task "stylus", ->
         @emit "end"
     .pipe $.stylus
       compress: not config.isDebug
-      sourcemap: inline: config.isDebug
+      sourcemap: inline: true if config.isDebug
       paths: ["#{config.dest}/img"]
       use: [
         nib()
