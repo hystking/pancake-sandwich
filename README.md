@@ -41,12 +41,11 @@ jsonファイルは、src/stylus/sprite に
 
 * --src ソースのディレクトリを指定（デフォルトは src）
 * --dest 出力のディレクトリを指定（デフォルトは debug、リリースビルドの場合は release）
-* --release つけるとリリースビルドになる（gulp の task の config.isDebug が false になる）
 
 **オプションは、すべて"--"を挟む**
 
 ```
-npm run build -- --release
+npm run build -- --dest public
 ```
 
 ## ファイル構成について

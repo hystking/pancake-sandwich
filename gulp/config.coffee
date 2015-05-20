@@ -1,7 +1,6 @@
 args = (require "yargs").argv
 
-_isDebug = not args.release?
-process.env.NODE_ENV = "production" unless _isDebug
+_isDebug = process.env.NODE_ENV isnt "production"
 
 module.exports =
   isDebug: _isDebug
