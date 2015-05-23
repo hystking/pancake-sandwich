@@ -1,7 +1,6 @@
 {
   "scripts": {
     "watch": "gulp watch",
-    "serve": "gulp serve",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
     "postinstall": "bower install"
