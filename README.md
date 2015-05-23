@@ -13,18 +13,14 @@ npm install
 
 ## コマンド
 
-### npm run build
-
-ビルド  
-
-### npm run serve
-
-0.0.0.0:9000 にサーバを立てる
-
 ### npm run watch
 
 build, serve のあと、  
 jade, stylus, coffee の監視
+
+### npm run build
+
+リリースビルド  
 
 ### npm run sprite
 
@@ -40,7 +36,7 @@ jsonファイルは、src/stylus/sprite に
 全部共通
 
 * --src ソースのディレクトリを指定（デフォルトは src）
-* --dest 出力のディレクトリを指定（デフォルトは debug、リリースビルドの場合は release）
+* --dest 出力のディレクトリを指定（デフォルトは、watch の場合は debug、リリースビルドの場合は release）
 
 **オプションは、すべて"--"を挟む**
 
