@@ -28,8 +28,6 @@ src/img/sprite 以下のディレクトリのスプライトを作る
 画像は、src/img に  
 jsonファイルは、src/stylus/sprite に  
 それぞれ出力される
-    
-個別のタスクは、 sprite-#{directory_name} で登録される
 
 #### コマンドオプション
 
