@@ -19,7 +19,7 @@ gulp.task "coffeeify", ->
     .pipe $.if config.isDebug, $.sourcemaps.init()
     .pipe $.plumber
       errorHandler: (err) ->
-        console.log err.message
+        console.error message
         @emit "end"
     .pipe coffeeify
       extensions: [".coffee", ".json"]
