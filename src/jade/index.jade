@@ -21,9 +21,7 @@ block append meta
   meta(name="twitter:image:src", content=meta.ogImage)
 
 block content
-  main(class=meta.slug)
-    section.top
-      include module/top
+  main(class=meta.slug) main
   include module/social-roots
 
 block append stylesheet
