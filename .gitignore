@@ -139,6 +139,5 @@ node_modules
 ### Bower ###
 bower_components
 
-# Debug build
-/debug*
-/release*
+# debug build files
+/debug
