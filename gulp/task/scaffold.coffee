@@ -1,8 +1,5 @@
 gulp = require "gulp"
-$ = do require "gulp-load-plugins"
 config = require "../config"
-
-runSequence = require "run-sequence"
 
 gulp.task "scaffold", ->
   """
