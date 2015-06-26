@@ -6,9 +6,8 @@ gulp.task "copy", ->
   pngquant = require "imagemin-pngquant"
   gulp
     .src [
-      "#{config.src}/img/**/*.png"
-      "#{config.src}/img/**/*.jpg"
-      "#{config.src}/img/**/*.gif"
+      "#{config.src}/img/**/*.{png,jpg,gif}"
+      "!#{config.src}/img/sprite{,/**}"
       "#{config.src}/js/**/*.js"
     ],
       base: config.src
