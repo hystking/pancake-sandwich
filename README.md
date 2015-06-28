@@ -31,7 +31,7 @@ jsonファイルは、src/stylus/sprite に
   
 使うときは、以下のようにする
 ```
-mySprite = json("path/to/sprite.json"), {hash: true})
+mySprite = json("path/to/sprite.json", {hash: true})
 .my-icon
   sprite(mySprite.fileName)
 ```
@@ -41,7 +41,7 @@ mySprite = json("path/to/sprite.json"), {hash: true})
 全部共通
 
 * --src ソースのディレクトリを指定（デフォルトは src）
-* --dest 出力のディレクトリを指定（デフォルトは、watch の場合は debug、リリースビルドの場合は release）
+* --dest 出力のディレクトリを指定（デフォルトは、watch の場合は debug、リリースビルドの場合は public）
 
 **オプションは、すべて"--"を挟む**
 
