@@ -1,0 +1,11 @@
+_bg-size(path, scale)
+  size = image-size(path)
+  background-size: (size[0] * scale) (size[1] * scale)
+
+bg(path, scale = 1)
+  background-image: url(path)
+  _bg-size(path, scale)
+  
+bg-data-url(path, scale = 1)
+  background-image: data-url(path)
+  _bg-size(path, scale)
