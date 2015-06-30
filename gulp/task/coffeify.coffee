@@ -1,6 +1,7 @@
 gulp = require "gulp"
 $ = do require "gulp-load-plugins"
 config = require "../config"
+colors = require "colors"
 
 browserify = require "browserify"
 through2 = require "through2"
@@ -19,7 +20,7 @@ gulp.task "coffeeify", ->
     .pipe $.if config.isDebug, $.sourcemaps.init()
     .pipe $.plumber
       errorHandler: (err) ->
-        console.error err.message
+        console.log colors.red("[ERROR]", err.message)
         @emit "end"
     .pipe coffeeify
       extensions: [".coffee", ".json"]
