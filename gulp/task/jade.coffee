@@ -10,7 +10,6 @@ gulp.task "jade", ->
         console.log err.message
         @emit "end"
     .pipe $.jade
-      pretty: true
       data: config.siteConfig
     .pipe gulp.dest config.dest
     .pipe $.livereload()
