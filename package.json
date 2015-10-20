@@ -41,5 +41,8 @@
     "stylus": "latest",
     "through2": "latest",
     "yargs": "latest"
+  },
+  "browser": {
+    "common": "./site-config/common.coffee"
   }
 }
