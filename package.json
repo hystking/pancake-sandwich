@@ -1,9 +1,10 @@
 {
   "scripts": {
+    "test": "npm run build && tap test/build.js",
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
-    "postinstall": "bower install"
+    "postinstall": "bower install && npm test"
   },
   "devDependencies": {
     "bower": "latest",
@@ -39,6 +40,7 @@
     "run-sequence": "latest",
     "serve-static": "latest",
     "stylus": "latest",
+    "tap": "^2.2.0",
     "through2": "latest",
     "yargs": "latest"
   },
