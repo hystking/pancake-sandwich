@@ -8,7 +8,6 @@ gulp.task "copy", ->
     .src [
       "#{config.src}/img/**/*.{png,jpg,gif}"
       "!#{config.src}/img/sprite{,/**}"
-      "#{config.src}/js/**/*.js"
     ],
       base: config.src
     .pipe $.if not config.isDebug, $.imagemin
