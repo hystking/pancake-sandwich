@@ -4,7 +4,7 @@
     "dev": "gulp dev",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
-    "postinstall": "npm test && npm shrinkwrap --dev"
+    "postinstall": "npm test"
   },
   "devDependencies": {
     "browserify": "latest",
