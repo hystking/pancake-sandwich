@@ -8,7 +8,6 @@ gulp.task "build", ->
   # so we need to separate them!
   copy = [
     "copy"
-    "bower-scaffold"
     "modernizr"
   ]
   build = [

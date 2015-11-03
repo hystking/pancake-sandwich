@@ -4,10 +4,9 @@
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
-    "postinstall": "bower install && npm test"
+    "postinstall": "npm test"
   },
   "devDependencies": {
-    "bower": "latest",
     "browserify": "latest",
     "coffee-script": "latest",
     "coffeeify": "latest",
@@ -32,7 +31,6 @@
     "imagemin-pngquant": "latest",
     "is-directory": "latest",
     "lodash": "latest",
-    "main-bower-files": "latest",
     "mkdirp": "latest",
     "modernizr": "latest",
     "nib": "latest",
