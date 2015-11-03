@@ -11,14 +11,16 @@ npm install
 
 ## コマンド
 
-### npm run watch
+### npm run dev
 
+開発用タスク  
 build, serve のあと、  
 jade, stylus, coffee の監視
 
 ### npm run build
 
-リリースビルド  
+ビルド  
+デフォルトではpublic以下にファイルが生成される
 
 ### npm run sprite
 
