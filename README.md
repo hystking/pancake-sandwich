@@ -9,8 +9,6 @@
 npm install
 ```
 
-※ bower install もはしる
-
 ## コマンド
 
 ### npm run watch
@@ -34,19 +32,6 @@ jsonファイルは、src/stylus/sprite に
 mySprite = json("path/to/sprite.json", {hash: true})
 .my-icon
   sprite(mySprite.fileName)
-```
-
-#### コマンドオプション
-
-全部共通
-
-* --src ソースのディレクトリを指定（デフォルトは src）
-* --dest 出力のディレクトリを指定（デフォルトは、watch の場合は debug、リリースビルドの場合は public）
-
-**オプションは、すべて"--"を挟む**
-
-```
-npm run build -- --dest public
 ```
 
 ## ファイル構成について
