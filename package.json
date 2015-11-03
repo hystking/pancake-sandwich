@@ -41,8 +41,7 @@
     "serve-static": "latest",
     "stylus": "latest",
     "tap": "^2.2.0",
-    "through2": "latest",
-    "yargs": "latest"
+    "through2": "latest"
   },
   "browser": {
     "common": "./site-config/common.coffee"
