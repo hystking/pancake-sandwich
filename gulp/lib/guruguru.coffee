@@ -6,11 +6,10 @@ clearLog = ->
   for i in [0...lines]
     console.log "\n"
 
-module.exports = (gulp, rotatingSpeed) ->
+module.exports = (gulp, rotatingSpeed = 1) ->
   lastTask = ""
   taskStarted = false
   reversed = false
-  rotatingSpeed or= 1
   duration = 1000 / rotatingSpeed
 
   gulp.on "task_start", (e) ->
