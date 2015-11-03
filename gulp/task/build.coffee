@@ -10,12 +10,9 @@ gulp.task "build", ->
     "copy"
     "modernizr"
   ]
-  build = [
+  compile = [
     "jade"
     "stylus"
     "coffeeify"
   ]
-  if config.isDebug
-    runSequence ["clean"], copy, build
-  else
-    runSequence ["clean"], copy, build, ["scaffold"]
+  runSequence ["clean"], copy, compile
