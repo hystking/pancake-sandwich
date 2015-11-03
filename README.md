@@ -33,19 +33,3 @@ mySprite = json("path/to/sprite.json", {hash: true})
 .my-icon
   sprite(mySprite.fileName)
 ```
-
-## ファイル構成について
-
-### base.jade, base.styl
-
-* サイト共通パーツ
-* mixinも基本ここ
-
-### index.jade, style.styl, app.coffee
-
-* エントリポイント  
-* モジュールとパーツの読み込み
-
-### module/\*\*/\*.jade, module/\*\*/\*.styl, module/\*\*/\*.coffee
-
-* 使いまわせるモジュールとか、使いまわさなくても分けたいセクションとか
