@@ -31,7 +31,7 @@ jsonファイルは、src/stylus/sprite に
   
 使うときは、以下のようにする
 ```
-mySprite = json("path/to/sprite.json", {hash: true})
+mySprite = spriteObject("path/to/sprite.json")
 .my-icon
   sprite(mySprite.fileName)
 ```
