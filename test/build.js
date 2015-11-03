@@ -1,9 +1,9 @@
 "use strict";
 
-let fs = require("fs");
-let tap = require("tap");
+const fs = require("fs");
+const tap = require("tap");
 
-let statTest = (t) => (err, stat) => {
+const statTest = (t) => (err, stat) => {
   t.ok(!err, "file exists");
   t.ok(stat.size > 0, "file size bigger than 0");
   t.end();
