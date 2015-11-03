@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "test": "gulp build && tap test/* && NODE_ENV=production gulp build && NODE_ENV=production tap test/*",
+    "test": "gulp build && tap test/case/* && NODE_ENV=production gulp build && NODE_ENV=production tap test/case*",
     "dev": "gulp dev",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
-    "postinstall": "npm test"
+    "postinstall": "npm test && npm shrinkwrap --dev"
   },
   "devDependencies": {
     "browserify": "latest",
@@ -37,7 +37,7 @@
     "run-sequence": "latest",
     "serve-static": "latest",
     "stylus": "latest",
-    "tap": "^2.2.0",
+    "tap": "latest",
     "through2": "latest"
   },
   "browser": {
