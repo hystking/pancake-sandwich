@@ -13,11 +13,11 @@ gulp.task "modernizr", (callback) ->
   modernizr.build
     minify: not config.isDebug
     options: [
-      "html5shiv"
-      "setClasses"
+      # "html5shiv"
+      # "setClasses"
     ]
     "feature-detects": [
-      #"css/transforms"
+      # "css/transforms"
     ]
   , (res) ->
     mkdirp "#{config.dest}/js/lib", (err) ->
