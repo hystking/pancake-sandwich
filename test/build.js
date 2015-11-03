@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const tap = require("tap");
+const config = require("../gulp/config");
 
 const statTest = (t) => (err, stat) => {
   t.ok(!err, "file exists");
@@ -10,17 +11,17 @@ const statTest = (t) => (err, stat) => {
 };
 
 tap.test("can build index.html", (t) => {
-  fs.stat("public/index.html", statTest(t));
+  fs.stat(`${config.dest}/index.html`, statTest(t));
 });
 
 tap.test("can build index.css", (t) => {
-  fs.stat("public/css/index.css", statTest(t));
+  fs.stat(`${config.dest}/css/index.css`, statTest(t));
 });
 
 tap.test("can build index.js", (t) => {
-  fs.stat("public/js/index.js", statTest(t));
+  fs.stat(`${config.dest}/js/index.js`, statTest(t));
 });
 
 tap.test("can build modernizr.js", (t) => {
-  fs.stat("public/js/lib/modernizr.js", statTest(t));
+  fs.stat(`${config.dest}/js/lib/modernizr.js`, statTest(t));
 });

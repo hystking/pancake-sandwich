@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "npm run build && tap test/build.js",
+    "test": "gulp build && tap test/* && NODE_ENV=production gulp build && NODE_ENV=production tap test/*",
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp build",
     "sprite": "gulp sprite",
