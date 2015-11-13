@@ -1,4 +1,4 @@
-# ペラN ES2015 のテンプレート
+# PERANES2015
 
 ## 必要なもの
 * Node.js, npm
