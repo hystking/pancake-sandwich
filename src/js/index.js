@@ -1,2 +1,2 @@
 // my sweet code is here
-console.log("hi!");
+(arg => console.log(`Hello! ${arg}!`))("ES2015");
