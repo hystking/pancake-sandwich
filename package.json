@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "browserify": "latest",
-    "coffee-script": "latest",
     "coffeeify": "latest",
     "colors": "latest",
     "connect": "latest",
