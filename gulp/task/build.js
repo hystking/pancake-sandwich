@@ -11,7 +11,7 @@ const copy = [
 const compile = [
   "jade",
   "stylus",
-  "coffeeify",
+  "browserify",
 ];
 
 gulp.task("build", () => {

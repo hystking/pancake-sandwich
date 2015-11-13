@@ -15,7 +15,7 @@ npm install
 
 開発用タスク  
 build, serve のあと、  
-jade, stylus, coffee の監視
+jade, stylus, js の監視
 
 ### npm run build
 

@@ -6,7 +6,7 @@ const colors = require("colors");
 const browserify = require("browserify");
 const through2 = require("through2");
 
-const coffeeify = (opt) => {
+const $browserify = (opt) => {
   return through2.obj((file, enc, next) => {
     browserify(opt)
     .add(file.path)
@@ -17,9 +17,9 @@ const coffeeify = (opt) => {
   })
 };
 
-gulp.task("coffeeify", () => {
+gulp.task("browserify", () => {
   gulp
-  .src(`${config.src}/coffee/index.coffee`)
+  .src(`${config.src}/js/index.js`)
   .pipe($.if(config.isDebug, $.sourcemaps.init()))
   .pipe($.plumber({
     errorHandler: function(err) {
@@ -27,9 +27,9 @@ gulp.task("coffeeify", () => {
       this.emit("end");
     },
   }))
-  .pipe(coffeeify({
-    extensions: [".coffee", ".json"],
-    transform: ["coffeeify"],
+  .pipe($browserify({
+    extensions: [".js", ".json"],
+    //transform: ["coffeeify"],
     debug: config.isDebug,
   }))
   .pipe($.if(!config.isDebug, $.uglify({

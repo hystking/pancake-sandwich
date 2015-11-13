@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "browserify": "latest",
-    "coffeeify": "latest",
     "colors": "latest",
     "connect": "latest",
     "connect-livereload": "latest",
@@ -40,6 +39,6 @@
     "through2": "latest"
   },
   "browser": {
-    "common": "./site-config/common.coffee"
+    "common": "./site-config/common.js"
   }
 }
