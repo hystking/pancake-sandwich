@@ -1,0 +1,7 @@
+{
+  "name": "sandwich",
+  "main": "public/index.html",
+  "dependencies": {
+    "nw": "^0.12.3"
+  }
+}
