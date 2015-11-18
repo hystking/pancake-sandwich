@@ -1,4 +1,4 @@
-# PERANES2015
+# PancakeSandwich
 
 ## 必要なもの
 * Node.js, npm
@@ -7,6 +7,12 @@
 
 ```
 npm install
+```
+
+## Make a Sandwich
+
+```
+./make.sh
 ```
 
 ## コマンド
